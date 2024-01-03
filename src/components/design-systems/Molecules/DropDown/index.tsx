@@ -34,10 +34,12 @@ const DropDown: React.FC<DropDownProps> = ({
             <div
                 className={`trending-dropdown group absolute z-10 block h-fit w-auto items-start rounded-sm border-[0.5px] border-lightGray bg-white px-4 py-[11px] ${className}`}
                 onClick={handleToggle}
+                
             >
-                <div className="flex items-center justify-between gap-2">
+
+                <div className="flex items-center justify-between">
                     <Typography className="text-base font-semibold text-gray">{value?.name}</Typography>
-                    <div className=' bg-[#356646] w-6 h-6 flex rounded-full items-center justify-center'>
+                    <div className=' bg-[#356646] mr-4 w-6 h-6 flex flex-row rounded-full items-center justify-center'>
                         <ArrowDownIcon
                             className={`items-center transform ${isOpen ? 'rotate-180' : 'rotate-0'} transition-transform duration-300 ease-in`}
                             height={8}
@@ -46,6 +48,7 @@ const DropDown: React.FC<DropDownProps> = ({
                         />
 
                     </div>
+                    {children}
                 </div>
                 <div
                     className={`h-0 w-full opacity-0 ${hoverDropdown ? 'group-hover:h-fit group-hover:opacity-100' : isOpen ? 'h-fit opacity-100' : 'h-0 opacity-0'
@@ -61,7 +64,7 @@ const DropDown: React.FC<DropDownProps> = ({
                                     onClick={() => handleChange(drop)}
                                 >
                                     <a
-                                        className={`hoverAnimation text-start text-base font-semibold hover:text-neutral-100  ${drop.name != value.name && 'text-lightGray'
+                                        className={`text-start text-base font-normal hover:font-bold ${drop.name == value.name && 'font-bold'
                                             }`}
                                     >
                                         {drop.name}

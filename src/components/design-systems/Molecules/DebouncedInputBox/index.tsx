@@ -13,7 +13,7 @@ const DebouncedInputBox: React.FC<DebouncedInputBoxProps> = ({ onInputChange, cl
   useEffect(() => {
     const timerId = setTimeout(() => {
       onInputChange(inputValue);
-    }, 300); // Set the debounce delay (in milliseconds)
+    }, 1000); // Set the debounce delay (in milliseconds)
 
     return () => {
       clearTimeout(timerId);

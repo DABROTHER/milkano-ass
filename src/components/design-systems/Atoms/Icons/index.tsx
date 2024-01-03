@@ -89,3 +89,30 @@ export const EditIcon: React.FC<IconProps> = ({ className,
         </svg>
     );
 };
+
+export const PlusIcon: React.FC<IconProps> = ({ className,
+    fill = 'none',
+    stroke = 'white',
+    width = '13',
+    height = '12', }) => {
+    return (
+        <svg className={className} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 0C5.3724 0 0 5.3724 0 12C0 18.6276 5.3724 24 12 24C18.6276 24 24 18.6276 24 12C24 5.3724 18.6276 0 12 0ZM18 13.2H13.2V18H10.8V13.2H6V10.8H10.8V6H13.2V10.8H18V13.2Z" fill="white" />
+        </svg>
+    );
+};
+export const DeleteIcon: React.FC<IconProps> = ({ className,
+    fill = 'none',
+    stroke = 'white',
+    width = '13',
+    height = '12', }) => {
+    return (
+        <svg className={className} xmlns="http://www.w3.org/2000/svg" width="49" height="45" viewBox="0 0 49 45" fill="none">
+        <rect width="49" height="45" rx="5" fill="#FF0000"/>
+        <path d="M22 20H23.5V29H22V20Z" fill="white"/>
+        <path d="M26.5 20H28V29H26.5V20Z" fill="white"/>
+        <path d="M16 15.5V17H17.5V32C17.5 32.3978 17.658 32.7794 17.9393 33.0607C18.2206 33.342 18.6022 33.5 19 33.5H31C31.3978 33.5 31.7794 33.342 32.0607 33.0607C32.342 32.7794 32.5 32.3978 32.5 32V17H34V15.5H16ZM19 32V17H31V32H19Z" fill="white"/>
+        <path d="M22 12.5H28V14H22V12.5Z" fill="white"/>
+        </svg>
+    );
+};
